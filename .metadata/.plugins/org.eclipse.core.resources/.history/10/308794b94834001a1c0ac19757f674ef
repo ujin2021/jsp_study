@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 태그들을 쓸 때 겹치게 쓰면 안된다 -->
+<!-- 오버랩 되면 안된다 -->
+<center>
+<h1>펭수에 대한 정보</h1>
+<!-- header 제목용 -->
+<!-- 옆에 다른 것이 오게 할 수 없다. -->
+<hr size="10" color="green" width="500">
+<b>이름</b> : <font color="blue" size="6">펭수</font> <br>
+<i>나이</i> : <font color="#eb5934" size="5">100</font> <br>
+연락처 : <font color="#7734eb" size="5">010-1234-5678</font> <br>
+<hr size="10" color="blue" width="500">
+<font color="blue">소속 : kgitbank</font>
+</center>
+</body>
+</html>

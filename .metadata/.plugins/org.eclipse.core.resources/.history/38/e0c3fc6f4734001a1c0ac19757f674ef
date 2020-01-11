@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>펭수에 대한 정보</h1><!-- header 제목용 -->
+이름 : <font color="blue" size="6">펭수</font> <br>
+나이 : <font color="#eb5934" size="5">100</font> <br>
+연락처 : <font color="#7734eb" size="5">010-1234-5678</font> <br>
+</body>
+</html>

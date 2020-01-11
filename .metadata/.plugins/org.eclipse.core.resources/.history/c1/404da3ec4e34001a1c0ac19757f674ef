@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<h3>보고싶은 영화</h3>
+<hr color="red">
+</center>
+<!-- 1.테두리를 만든다<table> -->
+<!-- 2.행을 만든다 <tr> -->
+<!-- 3.칸을 정의한다<td> -->
+<!-- 한줄복사->ctrl+alt+화살표아래 -->
+<table border="1" align="center">
+	<tr align="center">
+		<td width="100">영화제목</td>
+		<td width="100">감독</td>
+		<td width="100">평점</td>
+	</tr>
+</table>
+</body>
+</html>

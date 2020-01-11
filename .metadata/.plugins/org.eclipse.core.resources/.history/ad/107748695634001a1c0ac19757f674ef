@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>로그인 화면</h3>
+<hr color="pink">
+ID : <input type="text" name="id"><br>
+PASSWORD: <input type="text" name="pw"><br>
+<input type="submit">
+</body>
+</html>
