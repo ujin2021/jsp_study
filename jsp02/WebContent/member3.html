@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<!-- 서버에 전해지는것은 value, 눈에보이는건 011 -->
+<body>
+<h3>회원 가입 화면</h3>
+<hr color="pink">
+<form action="join.jsp">
+id : <input type="text" name="id" placeholder="id는 3글자 이상"><br>
+pw : <input type="text" name="pw" placeholder="영문&숫자"><br>
+name : <input type="text" name="name"><br>
+tel : 
+	<select name="com">
+		<option value="010">010
+		<option value="011">011
+		<option value="012">012
+	</select>
+	<input type="text" name="tel" placeholder="00000000(8자리)"><br>
+성별 :
+	<!-- radio : 여러개중 하나만 선택해야 할 때  -->
+	<input type="radio" name="gender" value="man">남
+	<input type="radio" name="gender" value="woman">여<br>
+취미 : 
+	<!-- check box : 다중선택 -->
+	<input type="checkbox" name="hobby" value="run">달리기
+	<input type="checkbox" name="hobby" value="music">음악듣기
+	<input type="checkbox" name="hobby" value="book">독서
+	<input type="checkbox" name="hobby" value="hiking">등산
+	<input type="checkbox" name="hobby" value="tv">tv보기<br>
+하고싶은말 : <br>
+	<textarea rows="5" cols="35" name="word" placeholder="Describe yourself here"></textarea>
+<br><hr color="pink">
+<input type="submit" value="join">
+</form>
+</body>
+</html>

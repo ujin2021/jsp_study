@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 선택 만들때 : type, name 같아야한다 -->
+<h3>쇼핑몰 물건 등록</h3>
+<hr color="pink">
+<form action="shoppingMall2.jsp">
+물건 id : <input type="text" name="id"><br>
+물건 이름 : <input type="text" name="name"><br>
+물건 내용 : <input type="text" name="about" placeholder="detail of product"><br>
+물건 할인 여부: 
+	<input type="radio" name="sale" value="sale">sale
+	<input type="radio" name="sale" value="not sale">not sale <br>
+물건 가격 종류 : 
+	<input type="checkbox" name="price" value="10000">10000
+	<input type="checkbox" name="price" value="20000">20000
+	<input type="checkbox" name="price" value="30000">30000 <br>
+물건 구매시 선택 사항 입력 : <br>
+	<textarea rows="5" cols="35" name="notice" placeholder="pre notice"></textarea>
+<hr color="pink">
+<input type="submit" value="add">
+</form>
+</body>
+</html>
