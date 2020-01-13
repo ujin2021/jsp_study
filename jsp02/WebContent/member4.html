@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>join</title>
+</head>
+<h3 style="color:#ba7b65;">join page</h3>
+<hr color="#d4887d">
+<body>
+<form action="member4.jsp">
+<b><font size="3" color="#ba7b65">id : </font></b><input type="text" name="id" placeholder="영문or숫자 5자리이상"><br>
+<b><font size="3" color="#ba7b65">pw : </font></b><input type="text" name="pw" placeholder="영문+숫자 5자리이상"><br>
+<b><font size="3" color="#ba7b65">name : </font></b><input type="text" name="name" placeholder="ex)홍길동" size="10"><br>
+
+<b><font size="3" color="#ba7b65">성별 : </font></b>
+	<input type="radio" name="gender" value="man"><b><font color="#ba7b65">남자</font></b>
+	<input type="radio" name="gender" value="woman"><b><font color="#ba7b65">여자</font></b><br>
+	
+<b><font size="3" color="#ba7b65">휴대전화 : </font></b>
+	<select name="tel1">
+		<option value="010">010
+		<option value="02">02
+		<option value="053">053
+	</select>
+	<input type="text" name="tel2" placeholder="0000" size="10">
+	<input type="text" name="tel3" placeholder="0000" size="10"><br>
+
+<b><font size="3" color="#ba7b65">관심있는 카테고리(복수선택 가능) : </font></b><br>
+	<input type="checkbox" name="category" value="shirt"><b><font color="#ba7b65">shirt</font></b>
+	<input type="checkbox" name="category" value="skirt"><b><font color="#ba7b65">skirt</font></b>
+	<input type="checkbox" name="category" value="pants"><b><font color="#ba7b65">pants</font></b>
+	<input type="checkbox" name="category" value="ops"><b><font color="#ba7b65">ops</font></b>
+	<input type="checkbox" name="category" value="bag"><b><font color="#ba7b65">bag</font></b>
+	<input type="checkbox" name="category" value="shoes"><b><font color="#ba7b65">shoes</font></b><br>
+
+<b><font size="3" color="#ba7b65">기타 요청사항 : </font></b><br>
+	<textarea rows="5" cols="35" name="notion" placeholder="notion"></textarea><br>
+<input type="submit" value="join">
+<hr color="#d4887d">
+</form>
+</body>
+</html>
