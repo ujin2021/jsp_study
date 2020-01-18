@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+function idCheck() {
+	id = prompt("아이디 입력")
+	if(id.length > 4){
+		location.href="db.jsp"
+	}
+	else{
+		alert("아이디는 5글자 이상 입력해야 합니다.")	
+	}
+}
+function pwCheck() {
+	pw1 = prompt("패스워드 입력")
+	pw2 = prompt("패스워드 재입력")
+	//입력한것 출력(개발자한테만 보인다.), f12 console에 프린트된다
+	console.log("입력한 패스워드 : " + pw1)
+	console.log("재입력한 패스워드 : " + pw2)
+	
+	if(pw1 == pw2){
+		location.href = "db.jsp"
+	}
+	else{
+		alert("패스워드가 동일하지 않습니다.")
+	}
+}
+</script>
+</head>
+<body>
+<button type="button" onclick="idCheck()">아이디 글자 길이 체크</button>
+<button type="button" onclick="pwCheck()">패스워드 동일 여부 체크</button>
+</body>
+</html>

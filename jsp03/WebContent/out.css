@@ -1,0 +1,26 @@
+@charset "EUC-KR";
+/* tag선택해서 중괄호 안에 정의하면 그 tag를 만날때 그 스타일이 적용됨 */
+body {
+	color :  #400040;
+	background: lightgray;
+}
+ul{
+	/* 스타일 정의 */
+	/* ctrl + shift + / (자동주석) */
+}
+li{
+	/* 스타일 정의 */
+	list-style: none;
+	float: left;
+	padding: 5px; /* 띄어쓰기 해주는거 */
+	background: orange;
+}
+p{
+	background: mediumseagreen;
+}
+h3{
+	background: slateblue;
+}
+h4{
+	border: 10px dotted orange;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+function call1() {
+	alert("call1이 호출됨.")
+}
+/* call1()  */
+
+function call2() {
+	alert("call2 호출됨.")
+}
+function call3() {
+	//두 단어를 입력받아서
+	//합한 다음에 출력
+	//default object : window
+	word1 = prompt("첫번째 단어를 입력하세요")
+	word2 = prompt("두번째 단어를 입력하세요")
+	alert(word1 + word2)
+}
+function call4() {
+	//두 숫자를 입력받아서
+	//합한 다음에 출력
+	num1 = prompt("첫번재 숫자를 입력하세요")
+	num2 = prompt("두번째 숫자를 입력하세요")
+	
+	alert(parseInt(num1) + parseInt(num2))
+}
+</script>
+</head>
+<body>
+<button type="button" onclick="call1()">call1 호출</button>
+<button type="button" onclick="call2()">call2 호출</button>
+<button type="button" onclick="call3()">call3 호출</button>
+<button type="button" onclick="call4()">call4 호출</button>
+</body>
+</html>

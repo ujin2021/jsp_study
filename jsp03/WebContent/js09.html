@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	//b1이 클릭 되었을때 자동으로 호출 할 예정
+	$(function() { //body부분 먼저 읽고 와서 안을 처리(무명함수)
+		$("#content").keyup(function() {
+			//keyup : 실시간으로 검색결과 가지고 올때
+			//pw1, pw2 비교를 실시간으로 하고싶을때
+			content = $("#content").val()
+			$("div").text(content + "<br>")
+			id = "admin"
+			//입력값이 admin이면 "관리자 모드로 로그인"
+			//입력값이 admin이 아니면 "일반 모드로 로그인"
+			if(content == id){
+				$("div").text("관리자 모드로 로그인")
+			}
+			else{
+				$("div").text("일반모드로 로그인")
+			}
+		})
+	})
+
+</script>
+</head>
+<body>
+	입력내용  : <input type="text" id="content"><br>
+	<div>
+	
+	</div>
+</body>
+</html>

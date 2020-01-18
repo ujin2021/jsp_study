@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	//b1이 클릭 되었을때 자동으로 호출 할 예정
+	$(function() { //body부분 먼저 읽고 와서 안을 처리(무명함수)
+		$("#b1").click(function() {
+			content = $("#content").val()
+			$("div").append("<img src = car.PNG width=50 height=50>" + content + "<br>")
+		})
+	})
+
+</script>
+</head>
+<body>
+	입력내용  : <input type="text" id="content"><br>
+	<button type="button" id="b1">글자추가</button>
+	<button type="button" id="b2">자동차 추가</button>
+	<div>
+	
+	</div>
+</body>
+</html>

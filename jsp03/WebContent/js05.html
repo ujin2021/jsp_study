@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	//b1이 클릭 되었을때 자동으로 호출 할 예정
+	$(function() { //body부분 먼저 읽고 와서 안을 처리(무명함수)
+		$("#b1").click(function() {
+			console.log("b1클릭됨.")
+			id = $("#id").val()
+			console.log("입력받은 id : " + id)
+			
+			if(id.length > 4){
+				location.href = "db.jsp"
+			}
+			else{
+				alert("id는 5자 이상")
+			}
+		}) //b1 button 클릭했을때 fuction을 실행시켜라
+		
+		$("#b2").click(function() {
+			console.log("b2클릭됨.")
+			pw1 = $("#pw1").val()
+			pw2 = $("#pw2").val()
+			console.log("입력받은 pw : " + pw1)
+			console.log("재입력받은 pw : " + pw2)	
+			
+			if(pw1 == pw2){
+				location.href = "db.jsp"	
+			}
+			else{
+				alert("입력한 비밀번호가 동일하지 않습니다.")
+			}
+		})
+	})
+
+</script>
+</head>
+<body>
+	아이디  : <input type="text" name="id" id="id"><br>
+	패스워드1  : <input type="text" name="pw1" id="pw1"><br>
+	패스워드2 : <input type="text" name="pw2" id="pw2"><br>
+	<hr color="red">
+	<button type="button" id="b1">아이디 길이 체크</button>
+	<button type="button" id="b2">패스워드 동일 여부 체크</button>
+</body>
+</html>
