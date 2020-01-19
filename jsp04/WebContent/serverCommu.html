@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="out.css"></link>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function() { //body부분을 먼저 브라우저가 읽고 와!
+		$("#b1").click(function() {
+			// 1. 입력한 돈 가지고옴.
+			moneyValue = $("#money").val()
+			choiceValue = $("#choice").val()
+			$.ajax({
+				url: "money.jsp",//연결할 주소
+				data: {
+					money: moneyValue,
+					choice : choiceValue
+				},//넘길 데이터 지정
+				success: //연결 성공시 처리할 내용
+					function(result) { //result안에 jsp의 ok가 들어온다.(아무변수나 가능)
+						//alert("서버와의 통신 성공...!!")
+						$("#d1").html("서버와의 통신 성공..!<br>")
+						//alert("결제 결과는 " + result)
+						$("#d1").html("결제 결과 : " + result)
+					}
+			})
+			// 2. 결제를 처리해 줄 서버와 통신
+			// 3. 결제금액을 같이 보내야함.
+			// 4. 결제가 완료되었으면 실패, 성공 확인 메세지 받아옴.
+		})
+		
+		$("#b2").click(function() {
+			// 1. 입력한 id 가지고 와서
+			idValue = $("#id").val()
+			$.ajax({
+				url: "idCheck.jsp",
+				data: {
+					id: idValue
+				},
+				success: function(result) {
+					alert("서버와의 통신 성공")
+					//alert("중복 가능 여부 : " + result)
+					$("#d1").html("중복 가능 여부 : " + result)
+				}
+			})
+			// 2. 중복 처리 할 수 있는 통신
+			// 3. 데이터 id는 넘기면 됨.
+			// 4. 성공하면, id가 중복이 되었는지 안되었는지 알 수 있다.
+		})
+		
+		$("#b3").click(function() {
+			// 1. 입력한 id 가지고 와서
+			telValue = $("#tel").val()
+			$.ajax({
+				url: "number.jsp",
+				data: {
+					tel: telValue
+				},
+				success: function(result) {
+					alert("서버와의 통신 성공")
+					//alert("중복 가능 여부 : " + result)
+					$("#d1").html("받은 인증번호 : " + result)
+				}
+			})
+			// 2. 중복 처리 할 수 있는 통신
+			// 3. 데이터 id는 넘기면 됨.
+			// 4. 성공하면, id가 중복이 되었는지 안되었는지 알 수 있다.
+		})
+		
+	})
+</script>
+</head>
+<body>
+<h3>오늘은 4일차 입니다.</h3>
+결제금액 : <input type="text" id="money"><br>
+결제수단 : <input type="text" id="choice" placeholder="1)계좌이체2)신용카드3)휴대폰결제" size="30">
+<button id="b1">결제하기</button><br>
+
+회원가입할 id입력 : <input type="text" id="id">
+<button id="b2">id 중복체크</button><br>
+
+인증받을 전화번호 입력 : <input type="text" id="tel">
+<button id="b3">인증번호 받기</button><br>
+
+<hr color="red">
+<div id="d1"></div>
+</body>
+</html>

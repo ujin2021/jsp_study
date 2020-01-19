@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="out.css"></link>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function() { //body부분을 먼저 브라우저가 읽고 와!
+		// 1. b1 버튼을 선택하여 클릭하면,
+		$("#b1").click(function() {
+			// 2. id태그에 입력한 값을 가져온다.
+			id = $("#id").val() 
+			// 3. 5글자 이상이면 회원가입하면됨
+			if(id.length > 4){
+				$("#d1").html("<font color=green>아이디를 제대로 입력함.</font>")
+			}
+			else{
+				$("#d1").html("<font color=red>아이디가 다섯글자 미만임. 재입력 요망</font>")
+			}
+		})
+		
+		$("#b2").click(function() {
+			pw1 = $("#pw1").val()
+			pw2 = $("#pw2").val()
+			
+			if(pw1 == pw2){
+				$("#d2").html("<font color=green>비밀번호가 일치함.</font>")
+			}
+			else{
+				$("#d2").html("<font color=red>비밀번호가 일치하지 않음.</font>")
+			}
+		})
+		
+		$("#b3").click(function() {
+			id2 = $("#id2").val()
+			if(id2.length == 0){
+				//입력값 안넣었을때
+				$("#d3").html("<font color=red>입력값을 넣어야 함.</font>")
+			}
+			else{
+				//입력값 넣었을때
+				//주소를 바꾸고싶을때, ?[서버에 넘겨줄 값]붙여야함
+				//+뒤의 id2는 아까 .val()로 저장한값
+				location.href = "adminCheck.jsp?id2=" + id2
+			}
+		})
+	})
+</script>
+</head>
+<body>
+<h3>오늘은 4일차 입니다.</h3>
+id : <input type="text" name="id" id="id"><br>
+<input type="button" id="b1" value="idCheck">
+<div id="d1"></div>
+
+<hr color="red">
+
+pw1 : <input type="text" name="pw1" id="pw1"><br>
+pw2 : <input type="text" name="pw2" id="pw2"><br>
+<input type="button" id="b2" value="pwCheck">
+<div id="d2"></div>
+
+<hr color="red">
+
+managerId : <input type="text" name="id2" id="id2"><br>
+<input type="button" id="b3" value="adminCheck">
+<div id="d3"></div>
+</body>
+</html>
