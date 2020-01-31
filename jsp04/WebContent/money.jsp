@@ -2,17 +2,17 @@
     pageEncoding="EUC-KR"%>
  <%
  	String money = request.getParameter("money");
- 	String choice = request.getParameter("choice");
+ 	String payment = request.getParameter("payment");
  	
- 	switch(choice){
+ 	switch(payment){
  		case "1":
- 			out.print("계좌이체 선택/결제ok");
- 			break;
- 		case "2":
  			out.print("신용카드 선택/결제ok");
  			break;
- 		case "3":
+ 		case "2":
  			out.print("휴대폰 결제 선택/결제ok");
+ 			break;
+ 		case "3":
+ 			out.print("무통장입금 선택/결제ok");
  			break;
  		default :
  			out.print("결제 취소");

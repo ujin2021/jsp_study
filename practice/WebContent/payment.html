@@ -3,8 +3,34 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="out.css"></link>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#b1").click(function() {
+			moneyValue = $("#money").val()
+			paymentValue = $("#payment").val()
+			$.ajax({
+				url: "money.jsp" ,
+				data: {
+					money: moneyValue,
+					payment: paymentValue
+				},
+				success:
+					function(result) {
+						$("#d1").html("서버와의 통신 성공!<br>")
+						$("#d1").html("결제 결과 : " + result)
+					}
+			})
+		})
+	})
+</script>
 </head>
 <body>
-
+<h3>payment</h3>
+결제금액 : <input type="text" id="money"><br>
+결제수단 : <input type="text" id="payment" placeholder="1)신용카드 2)휴대폰결제 3)무통장입금" size="30">
+<button id="b1">결제하기</button><br>
+<div id="d1"></div>
 </body>
 </html>
