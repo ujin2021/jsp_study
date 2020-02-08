@@ -1,0 +1,99 @@
+@charset "EUC-KR";
+#td3{
+	background: skyblue;
+	width: 150px;
+	height: 50px;
+}
+
+#td2{
+	background: skyblue;
+}
+
+#td{
+	background: pink;
+	width: 150px;
+	height: 50px;
+}
+
+td{
+	text-align: center;
+}
+
+button:hover{
+	background: lime;
+	color: black;
+	font: 25px 궁서 bold;
+}
+
+
+button{
+	background: lime;
+	color: red;
+	font: 25px 궁서 bold;
+}
+
+input{
+	color: blue;
+	font: 25px 궁서 bold;
+	width: 200px;
+	background: pink;
+}
+
+#total{
+	background-image: url(../img/back.png);
+	color: blue; /* 글자색 */
+	font: 25px 궁서 bold; /* 글꼴 */
+	width: 800px;
+	height: 800px;
+}
+
+#top{
+	width: 800px;
+	height: 100px;
+	background: lime;	
+}
+
+#top2{
+	color: yellow;
+	top: 5px; /* 위에서 부터 얼만큼 떨어뜨릴건지 */
+	right: 5px;
+	width: 250px; 
+	height: 100px;
+	background: black;
+	position: fixed; /* 고정시켜야함 */
+	border-radius: 100px 10px;
+}
+
+li{
+	list-style: none; /* list앞에 점 있는것 */
+	float: left; /* 정렬 */
+	padding: 15px; /* 여백 */
+}
+
+a{
+	text-decoration: none; /* 링크 밑줄 사라지도록 */
+	color: red;
+}
+/* 좀더 세부적인 사항 정할땐 : 사용 */
+li:first-child {
+	/* 첫번째, 마지막은 굴리기 위해서 */
+	border-radius: 20px 0 0 20px;
+}
+
+li:last-child {
+	border-radius: 0 20px 20px 0;
+}
+
+li:nth-child(2n) {
+	/* li중에서 짝수만 선택(제품정보, 장바구니) */
+	background: pink;
+}
+
+li:nth-child(2n+1) {
+	background: orange;
+}
+
+a:hover {
+	/* hover : 마우스를 위에 올렸을때 */
+	background: gold;
+}
