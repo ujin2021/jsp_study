@@ -15,7 +15,9 @@
 	<div id="top">
 		<jsp:include page="top.jsp"></jsp:include>
 	</div>
-	<div id="top2">장바구니 들어가는 부분</div>
+	<div id="top2">
+		<jsp:include page="top2.jsp"></jsp:include>
+	</div>
 	<div id="center">
 	<!-- 이 페이지를 클릭하자마자 전체 목록 다 가져와야한다. -->
 	<%
@@ -40,12 +42,12 @@
 			ProductDTO dto = list.get(i);
 		%>
 			<tr>
-				<td id="td2"><%=dto.getId() %></td>
-				<td id="td2">
+				<td id="td3"><%=dto.getId() %></td>
+				<td id="td3">
 					<a href="select.jsp?id=<%=dto.getId() %>"><%=dto.getName() %></a>
 				</td>
-				<td id="td2"><%=dto.getPrice() %></td>
-				<td id="td2">
+				<td id="td3"><%=dto.getPrice() %></td>
+				<td id="td3">
 					<img src="img/<%=dto.getImg() %>" width="100" height="100">
 				</td>
 			</tr>

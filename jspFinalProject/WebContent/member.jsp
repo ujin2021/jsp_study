@@ -12,7 +12,9 @@
 	<div id="top">
 		<jsp:include page="top.jsp"></jsp:include>
 	</div>
-	<div id="top2">장바구니 들어가는 부분</div>
+	<div id="top2">
+		<jsp:include page="top2.jsp"></jsp:include>
+	</div>
 	<div id="center">
 	<br>
 	<!-- 로그인 구현 -->

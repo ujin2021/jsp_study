@@ -32,14 +32,13 @@ public class BbsDAO {
 	public void insert(BbsDTO dto) { //db.jsp copy
 		try {
 			//3. sql문 작성
-			String sql = "insert into bbs values (?,?,?,?)";
+			String sql = "insert into bbs(title, content, writer) values (?,?,?)";
 			//해당하는 class를 사용하지 않으면 프로그램언어는 sql문인지 모른다.
 			//sql문에 해당하는 class : PrepareStatement -> getConnection할때 Connection(java.sql) 변수로 저장해준다
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, dto.getId());
-			ps.setString(2, dto.getTitle());
-			ps.setString(3, dto.getContent());
-			ps.setString(4, dto.getWriter());
+			ps.setString(1, dto.getTitle());
+			ps.setString(2, dto.getContent());
+			ps.setString(3, dto.getWriter());
 			System.out.println("3. sql문 만들기 ok<br>");
 			
 			//4. sql을 db로 전송한다.
@@ -73,12 +72,13 @@ public class BbsDAO {
 	public void update(BbsDTO dto) {
 		try {
 			//3. sql문 작성
-			String sql = "update bbs set content = ? where id = ?";
+			String sql = "update bbs set title = ?, content = ? where id = ?";
 			//해당하는 class를 사용하지 않으면 프로그램언어는 sql문인지 모른다.
 			//sql문에 해당하는 class : PrepareStatement -> getConnection할때 Connection(java.sql) 변수로 저장해준다
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, dto.getContent());
-			ps.setString(2, dto.getId());
+			ps.setString(1, dto.getTitle());
+			ps.setString(2, dto.getContent());
+			ps.setString(3, dto.getId());
 			System.out.println("3. sql문 만들기 ok<br>");
 			
 			//4. sql을 db로 전송한다.
@@ -133,7 +133,7 @@ public class BbsDAO {
 		//local variable 은 항상 초기화해줘야한다.(쓰레기값들어가기때문에)
 		
 		try {
-			String sql = "select * from bbs";
+			String sql = "select * from bbs order by id desc";//최근글이 맨위에있어야 하므로 조건넣어준다
 			PreparedStatement ps = con.prepareStatement(sql);			
 			ResultSet rs = ps.executeQuery();
 			

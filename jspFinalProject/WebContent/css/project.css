@@ -1,4 +1,13 @@
 @charset "EUC-KR";
+#div1{
+	font-size: 25px;
+	font-weight: bold;
+}
+textarea{
+	background: pink;
+	width: 500px;
+	height: 200px;
+}
 #td3{
 	background: skyblue;
 	width: 150px;
@@ -7,6 +16,8 @@
 
 #td2{
 	background: skyblue;
+	width: 500px;
+	height: 200px;
 }
 
 #td{
