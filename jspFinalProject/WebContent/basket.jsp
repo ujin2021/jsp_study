@@ -15,7 +15,7 @@
 	<div id="top2">
 		<jsp:include page="top2.jsp"></jsp:include>
 	</div>
-	<div id="center">장바구니 결제 구현</div>
+	<div id="center">장바구니 결제구현</div>
 </div>
 </body>
 </html>

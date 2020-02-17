@@ -15,7 +15,7 @@
 	<div id="top">
 		<jsp:include page="top.jsp"></jsp:include>
 	</div>
-	<div id="top2">장바구니 들어가는 부분</div>
+	<div id="top2">장바구니</div>
 	<div id="center">
 	<!-- bbs.jsp를 호출하자마자 서버와 통신해야한다. 결과는  bbs의 목록. -->
 	<!-- 1. dao를 이용해서 목록을 가져온다. -->
