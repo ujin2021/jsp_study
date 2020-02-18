@@ -4,7 +4,6 @@ INDEX VERSION 1.4+C:\Users\ujin2\Desktop\youjin8222\.metadata\.plugins\org.eclip
 4211204473.index
 2121450815.index
 3516266223.index
-3516266223.index
 1424045572.index
 1755401707.index
 14424679.index
