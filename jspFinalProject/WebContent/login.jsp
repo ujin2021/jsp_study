@@ -27,7 +27,7 @@
  	//	return값이 true이면, id를 session으로 등록
  	//	return값이 false이면, id를 session으로 등록하지 않음
  	if(result){
- 		session.setAttribute("id",id);
+ 		session.setAttribute("id", id);
  	}
  	
  	//4. member.jsp로 간다
